@@ -86,7 +86,6 @@ function archiveNote(id) {
     }
     return note;
   });
-  // console.log(notes);
 }
 
 function unarchiveNote(id) {
@@ -97,8 +96,6 @@ function unarchiveNote(id) {
 
     return note;
   });
-
-  // console.log(notes);
 }
 
 function searchNotes(notes, keyword) {

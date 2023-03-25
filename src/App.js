@@ -1,5 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+
 import NavigationBar from "./components/NavigationBar";
 import HomePageWrapper from "./pages/HomePage";
 import ArchivedNotePageWrapper from "./pages/ArchiveNotePage";
@@ -9,12 +10,21 @@ import Page404 from "./pages/Page404";
 
 function App() {
   return (
-    <div>
-      <header>
+    <>
+      <header
+        style={{
+          margin: "0 46px 40px 46px",
+        }}
+      >
         <NavigationBar />
       </header>
 
-      <main>
+      <main
+        style={{
+          maxWidth: "1100px",
+          margin: "0 auto",
+        }}
+      >
         <Routes>
           <Route path="/" element={<HomePageWrapper />} />
           <Route path="/archive" element={<ArchivedNotePageWrapper />} />
@@ -23,7 +33,7 @@ function App() {
           <Route path="/*" element={<Page404 />} />
         </Routes>
       </main>
-    </div>
+    </>
   );
 }
 

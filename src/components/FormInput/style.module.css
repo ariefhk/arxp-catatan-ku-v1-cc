@@ -1,0 +1,33 @@
+.formInputWrapper {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formInputBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.formInputBox label {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.formInputBox input {
+  padding: 6px;
+  font-size: 2rem;
+}
+
+.formInputBox textarea {
+  padding: 6px;
+  font-size: 2rem;
+}
+
+.formInputButton {
+  width: max-content;
+  font-size: 2rem;
+  padding: 6px 12px;
+}

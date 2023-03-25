@@ -1,0 +1,21 @@
+.homePageWrapper {
+  margin-top: 18px;
+}
+
+.homePageTitle {
+  font-size: 2rem;
+}
+
+.homePageButton {
+  position: fixed;
+  bottom: 32px;
+  right: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  font-size: 2rem;
+  border-radius: 50%;
+  border: 1px solid black;
+}

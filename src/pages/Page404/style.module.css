@@ -1,0 +1,10 @@
+.page404PageWrapper {
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page404PageTitle {
+  font-size: 8rem;
+}

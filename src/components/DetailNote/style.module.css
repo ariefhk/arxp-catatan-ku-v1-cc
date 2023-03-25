@@ -1,0 +1,20 @@
+.detailNoteWrapper {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.detailNoteTitle {
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.detailNoteDate {
+  font-size: 2rem;
+}
+
+.detailNoteBody {
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+}

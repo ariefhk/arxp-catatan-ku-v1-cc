@@ -1,5 +1,8 @@
 import React from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
+import PropTypes from "prop-types";
+
+import styles from "./style.module.css";
 import { getArchivedNotes, searchNotes } from "../../utils/data/data";
 import SearchBar from "../../components/SearchBar";
 import Notelist from "../../components/NoteList";
@@ -42,13 +45,19 @@ class ArchivedNotePage extends React.Component {
   render() {
     const { notes, keyword } = this.state;
     const notesFiltered = searchNotes(notes, keyword);
-    console.log("archived Notes: ", this.state.notes);
+
     return (
-      <section>
-        <h1>Catatan Aktif</h1>
+      <section className={styles.archivePageWrapper}>
+        <h1 className={styles.archiveTitle}>Cari Catatan</h1>
         <SearchBar search={this.onSearch} />
         <Notelist notes={notesFiltered} />
       </section>
     );
   }
 }
+
+ArchivedNotePage.propTypes = {
+  onSearch: PropTypes.func.isRequired,
+  defaultKeyword: PropTypes.string,
+  navigate: PropTypes.func.isRequired,
+};

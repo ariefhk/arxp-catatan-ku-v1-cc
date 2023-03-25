@@ -1,8 +1,10 @@
 import React from "react";
-import DetailNote from "../../components/DetailNote";
 import { useNavigate, useParams } from "react-router-dom";
 import { BiArchiveIn, BiArchiveOut } from "react-icons/bi";
 import { MdDelete } from "react-icons/md";
+import PropTypes from "prop-types";
+
+import styles from "./style.module.css";
 import {
   getNote,
   deleteNote,
@@ -10,6 +12,7 @@ import {
   unarchiveNote,
 } from "../../utils/data/data";
 import Page404 from "../Page404";
+import DetailNote from "../../components/DetailNote";
 import Button from "../../components/Button";
 
 export default function DetailPageWrapper() {
@@ -55,29 +58,36 @@ class DetailPage extends React.Component {
     return (
       <section>
         {notes ? (
-          <section>
+          <>
             <DetailNote
               title={notes.title}
               createdAt={notes.createdAt}
               body={notes.body}
             />
-            <div>
+            <div className={styles.detailPageButtonWrapper}>
               {notes.archived ? (
-                <Button onClick={() => this.onArchiveHandler(notes.id)}>
+                <Button
+                  className={styles.detailPageButton}
+                  onClick={() => this.onArchiveHandler(notes.id)}
+                >
                   <BiArchiveIn />
-                  Sudah Archive
                 </Button>
               ) : (
-                <Button onClick={() => this.onArchiveHandler(notes.id)}>
+                <Button
+                  className={styles.detailPageButton}
+                  onClick={() => this.onArchiveHandler(notes.id)}
+                >
                   <BiArchiveOut />
-                  Belum Archive
                 </Button>
               )}
-              <Button onClick={() => this.onDelete(notes.id)}>
+              <Button
+                className={styles.detailPageButton}
+                onClick={() => this.onDelete(notes.id)}
+              >
                 <MdDelete />
               </Button>
             </div>
-          </section>
+          </>
         ) : (
           <Page404 />
         )}
@@ -85,3 +95,8 @@ class DetailPage extends React.Component {
     );
   }
 }
+
+DetailPage.propTypes = {
+  id: PropTypes.string.isRequired,
+  navigate: PropTypes.func.isRequired,
+};

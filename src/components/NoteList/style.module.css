@@ -1,0 +1,14 @@
+.noteListWrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.noteListWrapperNoData {
+  display: flex;
+  justify-content: center;
+}
+
+.noteListNoData {
+  font-size: 3rem;
+}

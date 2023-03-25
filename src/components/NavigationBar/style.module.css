@@ -1,0 +1,26 @@
+.navbarWrapper {
+  margin: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbarIcon {
+  font-size: 3rem;
+}
+
+.navbarIconLink {
+  color: black;
+  font-weight: 700;
+}
+
+.navbarLink {
+  display: flex;
+  align-items: center;
+}
+
+.navbarLinkText {
+  font-size: 2rem;
+  color: black;
+  font-weight: 700;
+}

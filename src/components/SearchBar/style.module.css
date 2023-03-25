@@ -1,0 +1,13 @@
+.searchBarWrapper {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.searchBarInput {
+  padding: 8px 6px;
+  font-size: 1.6rem;
+  border: none;
+  outline: 1px solid black;
+  border-radius: 4px;
+  width: 99%;
+}

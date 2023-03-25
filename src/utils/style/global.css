@@ -4,5 +4,6 @@ html {
 }
 body {
   font-size: 1.6rem;
+  font-family: "Inter", sans-serif;
   /* reset 10*1.6 = 16px, to make sure you do not get any 10px around */
 }
